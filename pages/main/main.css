@@ -267,6 +267,10 @@ body {
   background: none;
   outline: none;
   max-height: 5.2rem;
+  max-width: 5.2rem;
+}
+.pets_content .slider_button .left_arrow {
+  padding-bottom: 5px;
 }
 .pets_content .slider_button_reverted {
   transform: rotate(180deg);
@@ -276,6 +280,10 @@ body {
   background: none;
   outline: none;
   max-height: 5.2rem;
+  max-width: 5.2rem;
+}
+.pets_content .slider_button_reverted .right_arrow {
+  padding-bottom: 5px;
 }
 .pets_wrapper {
   width: 100%;
@@ -313,6 +321,30 @@ body {
 }
 .pets_button:hover {
   background-color: #FDDCC4;
+}
+
+.help {
+  padding-top: 6rem;
+  padding-bottom: 10rem;
+}
+.help_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.help_title {
+  font-family: Georgia;
+  font-size: 3.5rem;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 130%;
+  letter-spacing: 0.21rem;
+  text-align: center;
+}
+.help_title span {
+  display: block;
+  letter-spacing: 0.2rem;
 }
 
 @media screen and (max-width: 1280px) {

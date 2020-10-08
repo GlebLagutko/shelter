@@ -136,7 +136,7 @@ radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20
 
 @mixin button_secondary($color:$color-primary, $hover_color:$primary-color-light) {
   background-color: transparent;
-  box-shadow:inset 0 0 2px $color;
+  box-shadow: inset 0 0 2px $color;
   &:hover {
     box-shadow: none;
     background-color: $hover_color;
@@ -358,10 +358,10 @@ body {
   background-color: $color-light-l;
 
 
-
   &_content {
     display: flex;
     align-items: center;
+
     .pets_cards {
       display: flex;
       padding: 6rem 0;
@@ -402,14 +402,24 @@ body {
     }
 
     .slider_button {
+      .left_arrow {
+        padding-bottom: 5px;
+      }
+
       @include slider_button;
       max-height: 5.2rem;
+      max-width: 5.2rem;
     }
 
     .slider_button_reverted {
+      .right_arrow {
+        padding-bottom: 5px;
+      }
+
       transform: rotate(180deg);
       @include slider_button;
       max-height: 5.2rem;
+      max-width: 5.2rem;
     }
   }
 
@@ -435,11 +445,32 @@ body {
     letter-spacing: 0.2rem;
   }
 
-  &_button{
+  &_button {
     @include button_primary($color-primary, $primary-color-light);
     margin: 0;
   }
 
+}
+
+.help {
+  padding-top: 6rem;
+  padding-bottom: 10rem;
+
+  &_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  &_title {
+    @include h3;
+   text-align: center;
+    span {
+      display: block;
+      letter-spacing: 0.2rem;
+    }
+  }
 }
 
 
