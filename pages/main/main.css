@@ -143,6 +143,48 @@ body {
   border: none;
 }
 
+.about {
+  display: flex;
+  padding: 8rem 17.5rem 10rem 17.5rem;
+}
+.about .wrapper {
+  justify-content: center;
+}
+.about_image-wrapper {
+  display: flex;
+}
+.about_image {
+  width: 100%;
+}
+.about_content {
+  display: flex;
+  flex-direction: column;
+  max-width: 43rem;
+}
+.about_title {
+  color: #545454;
+  font-family: Georgia;
+  font-size: 3.5rem;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 130%;
+  letter-spacing: 0.06rem;
+}
+.about_description {
+  margin-top: 2.5rem;
+}
+.about_description p {
+  color: #4C4C4C;
+  font-family: Arial;
+  font-size: 1.5rem;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 160%;
+}
+.about_description p:nth-child(2) {
+  margin-top: 2.5rem;
+}
+
 @media screen and (max-width: 1280px) {
   .wrapper {
     padding: 0 4rem;

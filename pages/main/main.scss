@@ -257,7 +257,58 @@ body {
   }
 }
 
+.about {
+  display: flex;
 
+
+  &_wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 8rem 17.5rem 10rem 17.5rem;
+  }
+
+  & .wrapper {
+    justify-content: center;
+  }
+
+  &_image-wrapper {
+    display: flex;
+  }
+
+  &_image {
+    width: 100%;
+  }
+
+  &_content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 43rem;
+  }
+
+  &_title {
+     span{
+       display: block;
+       letter-spacing: 0.2rem;
+     }
+    color: $color-dark-l;
+    @include h3;
+  }
+
+  &_description {
+    margin-top: 2.5rem;
+
+    p {
+      &:nth-child(2) {
+        margin-top: 2.5rem;
+      }
+
+      color: $color-dark-xl;
+      @include paragraph-l;
+    }
+  }
+}
 
 @media screen and (max-width: 1280px) {
   .wrapper {
