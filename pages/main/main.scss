@@ -36,7 +36,7 @@ radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20
     style: normal;
   }
   line-height: 130%;
-  letter-spacing: 0.06rem;
+  letter-spacing: 0.21rem;
 }
 
 @mixin h4 {
@@ -47,10 +47,10 @@ radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20
     style: normal;
   }
   line-height: 115%;
-  letter-spacing: 0.06rem;
+  letter-spacing: 0.12rem;
 }
 
-@mixin h4 {
+@mixin h5 {
   font: {
     family: Georgia;
     size: 1.5rem;
@@ -58,7 +58,7 @@ radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20
     style: normal;
   }
   line-height: 110%;
-  letter-spacing: 0.06rem;
+  letter-spacing: 0.09rem;
 }
 
 @mixin paragraph-l {
@@ -89,7 +89,7 @@ radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20
     style: normal;
   }
   line-height: 110%;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.192rem;
 }
 
 @mixin logo_subtitle {
@@ -100,6 +100,49 @@ radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20
     style: normal;
   }
   letter-spacing: 0.13rem;
+}
+
+@mixin slider_button {
+  border: 3px solid $color-primary;
+  border-radius: 100%;
+  padding: 1.9rem;
+  background: none;
+  outline: none;
+
+}
+
+@mixin button() {
+  padding: 1.5rem 4.5rem;
+  margin-top: 4rem;
+  font-size: 1.7rem;
+  border-radius: 10rem;
+  line-height: 130%;
+  letter-spacing: 0.06rem;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+@mixin button_primary($color:$color-primary, $hover_color) {
+  background-color: $color;
+
+
+  &:hover {
+    background-color: $hover_color;
+  }
+  @include button;
+
+}
+
+@mixin button_secondary($color:$color-primary, $hover_color:$primary-color-light) {
+  background-color: transparent;
+  box-shadow:inset 0 0 2px $color;
+  &:hover {
+    box-shadow: none;
+    background-color: $hover_color;
+  }
+  @include button;
+
 }
 
 
@@ -184,7 +227,6 @@ body {
 
     &_active {
       border-bottom: solid 0.3rem $color-primary;
-
     }
 
     &_disabled {
@@ -246,14 +288,10 @@ body {
   }
 
   &_button {
-    padding: 1.5rem 4.5rem;
-    margin-top: 4rem;
-    font-size: 1.7rem;
-    background-color: $color-primary;
-    border-radius: 10rem;
-    line-height: 130%;
-    letter-spacing: 0.11rem;
-    border: none;
+    @include button_primary($color-primary, $primary-color-light);
+    max-width: 20.7rem;
+
+
   }
 }
 
@@ -285,13 +323,15 @@ body {
     justify-content: center;
     flex-direction: column;
     max-width: 43rem;
+    padding: 0;
   }
 
   &_title {
-     span{
-       display: block;
-       letter-spacing: 0.2rem;
-     }
+    span {
+      display: block;
+      letter-spacing: 0.2rem;
+    }
+
     color: $color-dark-l;
     @include h3;
   }
@@ -310,9 +350,102 @@ body {
   }
 }
 
+
+.pets {
+
+  padding-top: 8rem;
+  padding-bottom: 10rem;
+  background-color: $color-light-l;
+
+
+
+  &_content {
+    display: flex;
+    align-items: center;
+    .pets_cards {
+      display: flex;
+      padding: 6rem 0;
+
+    }
+
+    .pets_card {
+      background-color: $color-light-s;
+      border-radius: 0.9rem;
+      display: flex;
+      flex-direction: column;
+      margin: 0 4.5rem;
+
+      &-image {
+        width: 100%;
+
+      }
+
+      &-title {
+        text-align: center;
+        margin: 3rem 3rem;
+        @include h4;
+        letter-spacing: 0;
+
+      }
+
+      &-content {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 3rem;
+        align-items: center;
+      }
+
+      &-button {
+        @include button_secondary();
+        margin: 0;
+      }
+    }
+
+    .slider_button {
+      @include slider_button;
+      max-height: 5.2rem;
+    }
+
+    .slider_button_reverted {
+      transform: rotate(180deg);
+      @include slider_button;
+      max-height: 5.2rem;
+    }
+  }
+
+
+  &_wrapper {
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  &_title {
+    @include h3;
+    color: $color-dark-l;
+    text-align: center;
+    max-width: 40rem;
+  }
+
+  span {
+    display: block;
+    letter-spacing: 0.2rem;
+  }
+
+  &_button{
+    @include button_primary($color-primary, $primary-color-light);
+    margin: 0;
+  }
+
+}
+
+
 @media screen and (max-width: 1280px) {
   .wrapper {
-    padding: 0 4rem;
+    margin: 0 4rem;
   }
 }
 
