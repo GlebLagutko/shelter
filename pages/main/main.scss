@@ -453,10 +453,12 @@ body {
 }
 
 .help {
-  padding-top: 6rem;
+  padding-top: 8.3rem;
   padding-bottom: 10rem;
 
   &_wrapper {
+    margin-left: 4.5rem;
+    margin-right: 4.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -465,11 +467,54 @@ body {
 
   &_title {
     @include h3;
-   text-align: center;
+    text-align: center;
+
     span {
       display: block;
       letter-spacing: 0.2rem;
     }
+  }
+
+  &_line-title {
+    @include h4;
+    color: $color-dark-l;
+    text-align: center;
+  }
+
+  &_line-icon-wrapper {
+    margin-bottom: 3rem;
+  }
+
+  &_line-icon {
+    display: block;
+    margin: 0 auto;
+  }
+
+  &_line-elemnt {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &_content {
+    display: flex;
+    max-width: 102rem;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 8.7rem;
+  }
+
+  .help_content-line {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 6rem;
+  }
+
+  .help_content-line-second {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 2rem;
+    margin-top: 5.5rem;
   }
 }
 
