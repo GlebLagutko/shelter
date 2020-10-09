@@ -454,7 +454,7 @@ body {
 
 .help {
   padding-top: 8.3rem;
-  padding-bottom: 10rem;
+  padding-bottom: 4.3rem;
 
   &_wrapper {
     margin-left: 4.5rem;
@@ -482,7 +482,7 @@ body {
   }
 
   &_line-icon-wrapper {
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
   }
 
   &_line-icon {
@@ -490,9 +490,10 @@ body {
     margin: 0 auto;
   }
 
-  &_line-elemnt {
+  &_line-element {
     display: flex;
     flex-direction: column;
+    margin: 0 6rem 6rem;
   }
 
   &_content {
@@ -505,16 +506,79 @@ body {
 
   .help_content-line {
     display: flex;
-    justify-content: space-between;
-
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -7rem;
     margin-top: 6rem;
   }
 
-  .help_content-line-second {
+}
+
+.donation {
+  padding-top: 8rem;
+  padding-bottom: 10rem;
+
+  background-color: $color-light-l;
+
+  &_wrapper {
     display: flex;
-    justify-content: space-around;
-    padding: 0 2rem;
-    margin-top: 5.5rem;
+    padding: 0 14rem;
+    justify-content: space-between;
+    align-content: center;
+    height: 28.4rem;
+  }
+
+  &_image-wrapper {
+    padding-top: 1rem;
+  }
+
+  &_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 3rem;
+  }
+
+  .content-title {
+    span {
+      display: block;
+      letter-spacing: 0.2rem;
+    }
+
+    color: $color-dark-l;
+    @include h3;
+  }
+
+  .content-subtitle {
+    @include h5;
+    color: $color-dark-l;
+  }
+
+  .credit-card {
+    display: flex;
+    width: 35rem;
+    height: 4.3rem;
+    background-color: $color-primary;
+    border: none;
+    border-radius: 9px;
+    justify-content: space-evenly;
+    align-items: center;
+
+    span {
+      @include h4;
+      color: $color-dark-l;
+    }
+  ;
+  }
+
+  .main-text {
+    font-family: Arial;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    color: $color-dark-m;
+    max-width: 37rem;
   }
 }
 
