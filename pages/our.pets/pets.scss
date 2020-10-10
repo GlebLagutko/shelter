@@ -106,8 +106,11 @@ radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20
 @mixin slider_button {
   box-shadow: inset 0 0 3px $color-primary;
   border: none;
+  width: 52px;
+  height: 52px;
   border-radius: 100%;
-  padding: 1.9rem;
+  text-align: center;
+  padding: 12px;
   background: none;
   outline: none;
   &:hover {
@@ -184,9 +187,11 @@ body {
 
 .header {
   width: 100%;
-  position: sticky;
+  position: fixed;
+  background-color: #FFFFFF;
   padding-top: 30px;
   padding-bottom: 30px;
+
 }
 
 .logo {
@@ -257,8 +262,9 @@ body {
 }
 
 .pets {
-  padding: 8rem 4rem 10rem 4rem;
+  padding: 20rem 4rem 10rem 4rem;
   background-color: $color-light-l;
+
 
   &_wrapper {
 
@@ -281,11 +287,13 @@ body {
 
   &_content {
     justify-content: center;
+    max-height: 1365px;
     display: flex;
     flex-wrap: wrap;
     margin-top: 6rem;
     column-gap: 4rem;
     row-gap: 3rem;
+
   }
 
   .pets_card {
@@ -324,6 +332,40 @@ body {
       margin: 0;
     }
   }
+
+  .navigation {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+
+    &_active-button {
+      @include slider_button;
+      @include h4;
+      color: $color-dark-xl;
+
+    }
+
+    &_counter {
+      @include slider_button;
+      @include h4;
+      color: $color-dark-xl;
+      background-color: $color-primary;
+    }
+
+    &_disapled-button {
+      @include slider_button;
+      @include h4;
+      color: $color-dark-s;
+      box-shadow: inset 0 0 3px $color-dark-s;
+
+      &:hover {
+        background: none;
+      }
+    }
+  }
+
+
 }
 
 
@@ -384,7 +426,8 @@ body {
 
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
+
   .wrapper {
     margin: 0 3rem;
   }
@@ -392,12 +435,24 @@ body {
   .footer_wrapper {
     column-gap: 6rem;
   }
+
+  .pets_content {
+    margin-top: 3rem;
+  }
+
+  .navigation {
+    margin-top: 40px;
+  }
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (min-width: 1280px) {
+
+
   .wrapper {
     margin: 0 4rem;
   }
-
+  .navigation {
+    margin-top: 60px;
+  }
 
 }

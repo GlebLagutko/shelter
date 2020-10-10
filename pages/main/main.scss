@@ -28,6 +28,17 @@ radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20
   line-height: 130%;
 }
 
+@mixin h3-mobile {
+  font: {
+    family: Arial, serif;
+    style: normal;
+    weight: normal;
+    size: 15px;
+  };
+  letter-spacing: 0.072rem;
+  line-height: 160%;
+}
+
 @mixin h3 {
   font: {
     family: Georgia;
