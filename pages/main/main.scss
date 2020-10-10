@@ -12,11 +12,11 @@ $color-dark-xl: #4C4C4C;
 $color-dark-2xl: #444444;
 $color-dark-3xl: #292929;
 
-$start-screen-gradient: url(noise_transparent@2x.png),
+$start-screen-gradient: url(../../assets/noise_transparent@2x.png),
 radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
 ;
 
-$footer-gradient: url(noise_transparent@2X.png),
+$footer-gradient: url(../../assets/noise_transparent@2X.png),
 radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
 
 @mixin h2 {
@@ -103,11 +103,16 @@ radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20
 }
 
 @mixin slider_button {
-  border: 3px solid $color-primary;
+  box-shadow: inset 0 0 3px $color-primary;
+  border: none;
   border-radius: 100%;
   padding: 1.9rem;
   background: none;
   outline: none;
+  &:hover {
+    background-color: $color-primary;
+    cursor: pointer;
+  }
 
 }
 
@@ -217,19 +222,26 @@ body {
     align-items: center;
 
     .list_link {
-      color: $color-light-xl;
+      //color: $color-light-xl;
       font-family: Arial;
       font-size: 1.5rem;
       font-weight: 400;
       line-height: 160%;
+
+      &:hover {
+        cursor: pointer;
+        color: $color-light-l;
+      }
     }
 
 
     &_active {
+      color: $color-light-l;
       border-bottom: solid 0.3rem $color-primary;
     }
 
     &_disabled {
+
       color: $color-dark-s;
     }
   }
@@ -365,7 +377,9 @@ body {
     .pets_cards {
       display: flex;
       padding: 6rem 0;
-
+      column-gap: 9rem;
+      margin-left: 5.3rem;
+      margin-right: 5.3rem;
     }
 
     .pets_card {
@@ -373,8 +387,11 @@ body {
       border-radius: 0.9rem;
       display: flex;
       flex-direction: column;
-      margin: 0 4.5rem;
 
+
+      &:hover {
+        cursor: pointer;
+      }
 
       &-image {
         width: 100%;
@@ -464,6 +481,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    margin-bottom: 6rem;
   }
 
   &_title {
@@ -483,7 +501,7 @@ body {
   }
 
   &_line-icon-wrapper {
-    margin-bottom: 2.5rem;
+    margin-bottom: 2.7rem;
   }
 
   &_line-icon {
@@ -494,12 +512,10 @@ body {
   &_line-element {
     display: flex;
     flex-direction: column;
-    margin: 0 6rem 6rem;
   }
 
   &_content {
     display: flex;
-    max-width: 102rem;
     flex-direction: column;
     width: 100%;
     margin: 0 8.7rem;
@@ -509,7 +525,8 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 0 -7rem;
+    column-gap: 12rem;
+    row-gap: 5.5rem;
     margin-top: 6rem;
   }
 
@@ -565,9 +582,13 @@ body {
     justify-content: space-evenly;
     align-items: center;
 
-    span {
+    a {
       @include h4;
       color: $color-dark-l;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   ;
   }
@@ -584,13 +605,25 @@ body {
 }
 
 .footer {
+
+
   background: $footer-gradient;
   padding-top: 4rem;
 
+  a {
+    text-decoration: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
   &_wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
     width: 100%;
+    column-gap: 16rem;
   }
 
   &_content {

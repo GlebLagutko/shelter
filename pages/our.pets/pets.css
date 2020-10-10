@@ -1,0 +1,250 @@
+:root {
+  font-size: 10px;
+}
+
+.icon {
+  padding: 0 12rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  margin: 0 auto;
+  max-width: 120rem;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.header {
+  width: 100%;
+  position: sticky;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+}
+.logo_title {
+  color: #545454;
+  font-family: Georgia;
+  font-size: 3.2rem;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 110%;
+  letter-spacing: 0.192rem;
+}
+.logo_subtitle {
+  margin-top: 1rem;
+  color: #292929;
+  text-align: center;
+  font-family: Georgia;
+  font-size: 1.3rem;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: 0.13rem;
+}
+
+.menu {
+  display: flex;
+  width: 44.3rem;
+}
+
+.list {
+  display: flex;
+  width: 100%;
+  list-style-type: none;
+  justify-content: space-between;
+}
+.list .list_item {
+  display: flex;
+  align-items: center;
+}
+.list .list_item .list_link {
+  font-family: Arial;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 160%;
+}
+.list .list_item .list_link:hover {
+  cursor: pointer;
+  color: #292929;
+}
+.list .list_item_active {
+  color: #292929;
+  border-bottom: solid 0.3rem #F1CDB3;
+}
+.list .list_item_disabled {
+  color: #545454;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.pets {
+  padding: 8rem 4rem 10rem 4rem;
+  background-color: #F6F6F6;
+}
+.pets_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+.pets_title {
+  text-align: center;
+  color: #545454;
+  font-family: Georgia;
+  font-size: 3.5rem;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 130%;
+  letter-spacing: 0.21rem;
+}
+.pets_title span {
+  display: block;
+  text-align: center;
+  letter-spacing: 0.2rem;
+}
+.pets_content {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 6rem;
+  column-gap: 4rem;
+  row-gap: 3rem;
+}
+.pets .pets_card {
+  background-color: #FAFAFA;
+  border-radius: 0.9rem;
+  display: flex;
+  flex-direction: column;
+}
+.pets .pets_card:hover {
+  cursor: pointer;
+}
+.pets .pets_card-image {
+  width: 100%;
+}
+.pets .pets_card-title {
+  text-align: center;
+  margin: 3rem 3rem;
+  font-family: Georgia;
+  font-size: 2rem;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 115%;
+  letter-spacing: 0.12rem;
+  letter-spacing: 0;
+}
+.pets .pets_card-content {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 3rem;
+  align-items: center;
+}
+.pets .pets_card-button {
+  background-color: transparent;
+  box-shadow: inset 0 0 2px #F1CDB3;
+  padding: 1.5rem 4.5rem;
+  margin-top: 4rem;
+  font-size: 1.7rem;
+  border-radius: 10rem;
+  line-height: 130%;
+  letter-spacing: 0.06rem;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  margin: 0;
+}
+.pets .pets_card-button:hover {
+  box-shadow: none;
+  background-color: #FDDCC4;
+}
+
+.footer {
+  background: url(../../assets/noise_transparent@2X.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+  padding-top: 4rem;
+}
+.footer a {
+  text-decoration: none;
+}
+.footer a:hover {
+  cursor: pointer;
+}
+.footer_wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  column-gap: 16rem;
+}
+.footer_content {
+  display: flex;
+  justify-content: space-between;
+}
+.footer_column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 6rem;
+  padding-top: 1.5rem;
+}
+.footer_title {
+  font-family: Georgia;
+  font-size: 3.5rem;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 130%;
+  letter-spacing: 0.21rem;
+  display: flex;
+  flex-direction: column;
+  color: #FFFFFF;
+}
+.footer_info {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 2.5rem;
+}
+.footer .info_text {
+  font-family: Georgia;
+  font-size: 2rem;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 115%;
+  letter-spacing: 0.12rem;
+  color: #F1CDB3;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    margin: 0 3rem;
+  }
+
+  .footer_wrapper {
+    column-gap: 6rem;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .wrapper {
+    margin: 0 4rem;
+  }
+}
+
+/*# sourceMappingURL=pets.css.map */
