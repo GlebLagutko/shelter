@@ -28,6 +28,7 @@ body {
 }
 
 .header {
+  z-index: 100000;
   width: 100%;
   position: fixed;
   background-color: #FFFFFF;
@@ -312,8 +313,25 @@ body {
 }
 
 @media screen and (min-width: 768px) {
+  .footer_column {
+    row-gap: 3rem;
+    margin-bottom: 7rem;
+  }
+
+  .footer_info {
+    align-items: center;
+  }
+
+  .hidden_under-1280 {
+    visibility: hidden;
+  }
+
   .wrapper {
     margin: 0 3rem;
+  }
+
+  .pets {
+    padding: 20rem 4rem 7.6rem 4rem;
   }
 
   .footer_wrapper {
@@ -324,11 +342,39 @@ body {
     margin-top: 3rem;
   }
 
+  .footer {
+    padding-top: 1.5rem;
+  }
+
   .navigation {
     margin-top: 40px;
   }
 }
 @media screen and (min-width: 1280px) {
+  .pets_title {
+    margin-bottom: 3rem;
+  }
+
+  .footer {
+    padding-top: 4rem;
+  }
+
+  .pets_content {
+    margin-bottom: 2rem;
+  }
+
+  .hidden_under-1280 {
+    visibility: visible;
+  }
+
+  .pets {
+    padding: 20rem 4rem 10rem 4rem;
+  }
+
+  .footer_wrapper {
+    column-gap: 16rem;
+  }
+
   .wrapper {
     margin: 0 4rem;
   }
