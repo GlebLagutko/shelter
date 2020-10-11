@@ -29,6 +29,17 @@ radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20
   line-height: 130%;
 }
 
+@mixin h3-mobile {
+  font: {
+    family: Georgia;
+    style: normal;
+    weight: normal;
+    size: 25px;
+  };
+  letter-spacing: 0.06rem;
+  line-height: 32.5px;
+}
+
 @mixin h3 {
   font: {
     family: Georgia;
@@ -82,6 +93,7 @@ radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20
   line-height: 150%;
 }
 
+
 @mixin logo_title {
   font: {
     family: Georgia;
@@ -90,7 +102,7 @@ radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20
     style: normal;
   }
   line-height: 110%;
-  letter-spacing: 0.192rem;
+  letter-spacing: 0.25rem;
 }
 
 @mixin logo_subtitle {
@@ -256,6 +268,12 @@ body {
   }
 }
 
+.burger-menu {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.9rem;
+}
+
 .main {
   display: flex;
   flex-direction: column;
@@ -280,6 +298,7 @@ body {
       text-align: center;
       letter-spacing: 0.2rem;
     }
+
 
     text-align: center;
     color: $color-dark-l;
@@ -430,33 +449,169 @@ body {
 
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 760px) {
+
+  .f_image {
+    width: 260px;
+    height: 269px;
+  }
+
+  .footer_title {
+    text-align: center;
+  }
+
 
   .footer_column {
-    row-gap: 3rem;
-    margin-bottom: 7rem;
+    row-gap: 4rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .footer_image {
+    margin-top: 1.7rem;
   }
 
   .footer_info {
     align-items: center;
-
+    padding-right: 0;
+    column-gap: 2rem;
   }
+
+  .footer {
+    padding-top: 1.5rem;
+  }
+
+  .footer_title {
+    @include h3-mobile;
+  }
+
+
+  .logo_title {
+    letter-spacing: 0.2rem;
+  }
+
+
+  .burger-menu {
+    display: flex;
+  }
+
+  .wrapper {
+    margin: 0 1rem;
+    column-gap: 4rem;
+    align-items: center;
+    justify-content: unset;
+  }
+
+  .pets_title {
+    span {
+      letter-spacing: 0.15rem;
+    }
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .pets {
+    padding: 16.2rem 1rem 4.1rem 1rem;
+
+    .navigation {
+      margin-top: 45px;
+      display: flex;
+      justify-content: center;
+      column-gap: 10px;
+    }
+
+    .header {
+      height: 12rem;
+    }
+
+    .pets_content {
+      margin-top: 4rem;
+    }
+
+    .pets_title {
+      @include h3-mobile;
+      letter-spacing: 0.15rem;
+    }
+
+    .pets_card-button {
+      padding-top: 1.8rem;
+    }
+
+    .pets_card-title {
+      letter-spacing: 0.1rem;
+    }
+
+    .hidden_under-1280 {
+      display: none;
+    }
+
+    .hidden_under-768 {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1270px) {
+
+
+  .pets_content {
+    margin-top: 6rem;
+  }
+
+  .pets_title {
+    @include h3;
+
+    span {
+      letter-spacing: 0.2rem;
+    }
+  }
+
+  .logo_title {
+    letter-spacing: 0.25rem;
+  }
+
+  .burger-menu {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+  }
+
+
+
 
   .hidden_under-1280 {
     visibility: hidden;
   }
 
-  .wrapper {
-    margin: 0 3rem;
+  .hidden_under-768 {
+    visibility: visible;
   }
+
+  .wrapper {
+    display: flex;
+    margin: 0 3rem;
+    max-width: 120rem;
+    flex: 1;
+    justify-content: space-between;
+  }
+
 
   .pets {
-    padding: 20rem 4rem 7.6rem 4rem;;
+    padding: 20rem 4rem 7.6rem 4rem;
+
+    .navigation {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      column-gap: 20px;
+    }
   }
 
-  .footer_wrapper {
-    column-gap: 6rem;
-  }
+
+
 
   .pets_content {
     margin-top: 3rem;
@@ -464,6 +619,20 @@ body {
 
   .footer {
     padding-top: 1.5rem;
+
+    .footer_wrapper {
+      column-gap: 6rem;
+    }
+
+    .footer_column {
+      row-gap: 3rem;
+      margin-bottom: 7rem;
+    }
+
+    .footer_info {
+      align-items: center;
+
+    }
   }
 
   .navigation {
@@ -473,8 +642,14 @@ body {
 
 @media screen and (min-width: 1280px) {
 
+
+  .burger-menu {
+    display: none;
+  }
+
   .pets_title {
     margin-bottom: 3rem;
+    @include h3;
   }
 
   .footer {
@@ -483,6 +658,7 @@ body {
 
   .pets_content {
     margin-bottom: 2rem;
+    margin-top: 3rem;
   }
 
   .hidden_under-1280 {
@@ -503,5 +679,6 @@ body {
   .navigation {
     margin-top: 60px;
   }
+
 
 }
